@@ -476,11 +476,14 @@
     line-height: 27px;
   }
   .home-border {
+    height: 70px;
+    max-height: 100px;
     width: 100%;
     display: flex;
-    max-width: 700px;
+    max-width: 500px;
     align-items: center;
-    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgb(237, 63, 63);
+    border-color: rgb(255, 255, 255);
     border-width: 4px;
     border-radius: 50px;
     flex-direction: column;
@@ -501,16 +504,20 @@
     justify-content: center;
     background-color: #ffffff;
   }
+  a{
+    text-decoration: none;
+  }
   .home-image {
+    
     height: 22px;
-    object-fit: cover;
+    object-fit:cover;
   }
   .home-textinput {
     width: 100%;
     padding: 0px;
     margin-top: var(--dl-space-space-halfunit);
     font-family: Karla;
-    border-color: #949AA5;
+    border-color: #ffffff;
     border-width: 0px;
     border-radius: 0px;
     margin-bottom: var(--dl-space-space-halfunit);
