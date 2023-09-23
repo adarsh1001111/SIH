@@ -69,7 +69,7 @@
 $host = "localhost"; // Replace with your database host name or IP address
 $username = "root"; // Replace with your database username
 $password = "nice1234"; // Replace with your database password
-$database = "hotel_registration_db"; // Replace with your database name
+$database = "tourism_db"; // Replace with your database name
 
 // Create a database connection
 $conn = mysqli_connect($host, $username, $password, $database);

@@ -3,7 +3,7 @@
 function connect() {
     static $conn;
     if ($conn === NULL){ 
-        $conn = mysqli_connect('localhost','root','nice1234','DDL.sql');
+        $conn = mysqli_connect('localhost','root','','tourism_db');
     }
     return $conn;
 }
