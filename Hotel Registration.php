@@ -22,7 +22,7 @@ require 'functions.php';
                     <span class="details">Hotel Name</span>
                     <input type="text" name="hotelName" placeholder="Enter hotel name" required>
                 </div>
-            </div>
+            <!-- </div> -->
             <div class="input-box">
             <span class="details">Onwer Name</span>
             <input type="text" name="ownerName" placeholder="Enter your name" required>
@@ -63,6 +63,7 @@ require 'functions.php';
             <div class="button">
                 <input type="submit" name="register" value="Register">
             </div>
+</div>
         </form>
     </div>
 </div>
