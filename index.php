@@ -33,6 +33,8 @@
               <div class="home-filter"></div>
                 <a href="Main registration.html" target="blank" class="home-border">
                 <input type="button" style="background:url('/10817176_19406483.jpg')" class="home-border" value="REGISTER"></a>
+                <a href="Main registration.html" target="blank" class="home-border">
+                <input type="button" style="background:url('/10817176_19406483.jpg')" class="home-border" value="login"></a>
               </div>
             </div>
           </div>

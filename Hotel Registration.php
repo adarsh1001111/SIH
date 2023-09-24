@@ -104,7 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     
 
     if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+        echo "Registration successful!" ;
+        header("Location: Hotel Dashboard.html");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

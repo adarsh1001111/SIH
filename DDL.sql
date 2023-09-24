@@ -1,4 +1,4 @@
-CREATE DATABASE tourism_db;
+CREATE DATABASE IF NOT EXISTS tourism_db;
 
 -- Use the newly created database
 USE tourism_db;
