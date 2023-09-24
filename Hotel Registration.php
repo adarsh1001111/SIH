@@ -1,3 +1,7 @@
+<?php 
+require 'functions.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,7 +15,7 @@
 <div class="container">
     <div class="title">Hotel Registration</div>
     <div class="content">
-        <form action="#" method="POST"> <!-- Specify the PHP file where the form data will be sent -->
+        <form  method="post"> <!-- Specify the PHP file where the form data will be sent -->
             <div class="user-details">
                 <!-- Add name attributes to the input fields to capture the data in PHP -->
                 <div class="input-box">
@@ -53,26 +57,27 @@
         </div>
 	<div class="input-box">
             <span class="details">Location</span>
-            <input type="url" name="location" placeholder="Enter Google Maps Link" required>
+            <input type="text" name="location" placeholder="Enter Google Maps Link" required>
           </div>
       </div>
             <div class="button">
-                <input type="submit" value="Register">
+                <input type="submit" name="register" value="Register">
             </div>
         </form>
     </div>
 </div>
 </body>
 </html>
-<?php
-// Database connection parameters
-$host = "localhost"; // Replace with your database host name or IP address
-$username = "root"; // Replace with your database username
-$password = "nice1234"; // Replace with your database password
-$database = "tourism_db"; // Replace with your database name
 
-// Create a database connection
-$conn = mysqli_connect($host, $username, $password, $database);
+<?php
+// // Database connection parameters
+// $host = "localhost"; // Replace with your database host name or IP address
+// $username = "root"; // Replace with your database username
+// $password = ""; // Replace with your database password
+// $database = "tourism_db"; // Replace with your database name
+
+// // Create a database connection
+$conn = connect();
 
 // Check the connection
 if (!$conn) {
@@ -80,21 +85,22 @@ if (!$conn) {
 }
 
 // Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     // Get form data
-    $hotelName = $_POST["hotelName"];
-    $ownerName = $_POST["ownerName"];
-    $email = $_POST["email"];
-    $phoneNumber = $_POST["phoneNumber"];
-    $gstNumber = $_POST["gstNumber"];
-    $address = $_POST["address"];
-    $pincode = $_POST["pincode"];
-    $city = $_POST["city"];
-    $state = $_POST["state"];
-    $location = $_POST["location"];
+    $hotelName = $_POST['hotelName'];
+    $ownerName = $_POST['ownerName'];
+    $email = $_POST['email'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $gstNumber = $_POST['gstNumber'];
+    $address = $_POST['address'];
+    $pincode = $_POST['pincode'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $location = $_POST['location'];
 
     // SQL query to insert data into the table
-    $sql = "INSERT INTO hotel_registration (hotel_name, owner_name, email, phone_number, gst_number, address, pincode, city, state, location) VALUES ('$hotelName', '$ownerName', '$email', '$phoneNumber', '$gstNumber', '$address', '$pincode', '$city', '$state', '$location')";
+    $sql = "INSERT INTO hotel_registration (ID,hotel_name, owner_name, email, phone_number, gst_number, address, pincode, city, state, location) VALUES (1,'$hotelName', '$ownerName', '$email', '$phoneNumber', '$gstNumber', '$address', '$pincode', '$city', '$state', '$location')";
+    
 
     if (mysqli_query($conn, $sql)) {
         echo "Registration successful!";
@@ -103,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close the database connection
-    mysqli_close($conn);
+    
 }
 ?>
-

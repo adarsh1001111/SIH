@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS tourism_db;
+CREATE DATABASE tourism_db;
 
 -- Use the newly created database
 USE tourism_db;
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS hotel_registration (
     email VARCHAR(255) NOT NULL,
     phone_number int NOT NULL,
     gst_number VARCHAR(20) NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     pincode VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
     stat VARCHAR(100) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS flight_registration (
     email VARCHAR(255) NOT NULL,
     phone_number int NOT NULL,
     gst_number VARCHAR(20) NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     pincode VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
     stat VARCHAR(100) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS cab_registration (
     email VARCHAR(255) NOT NULL,
     phone_number int NOT NULL,
     gst_number VARCHAR(20) NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     pincode VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
     stat VARCHAR(100) NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS bus_registration (
     email VARCHAR(255) NOT NULL,
     phone_number int NOT NULL,
     gst_number VARCHAR(20) NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     pincode VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
     stat VARCHAR(100) NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS cruise_registration (
     email VARCHAR(255) NOT NULL,
     phone_number int NOT NULL,
     gst_number VARCHAR(20) NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
     pincode VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
     stat VARCHAR(100) NOT NULL,
