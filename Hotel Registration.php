@@ -22,7 +22,7 @@ require 'functions.php';
                     <span class="details">Hotel Name</span>
                     <input type="text" name="hotelName" placeholder="Enter hotel name" required>
                 </div>
-            <!-- </div> -->
+            
             <div class="input-box">
             <span class="details">Onwer Name</span>
             <input type="text" name="ownerName" placeholder="Enter your name" required>
@@ -63,7 +63,7 @@ require 'functions.php';
             <div class="button">
                 <input type="submit" name="register" value="Register">
             </div>
-</div>
+            </div>
         </form>
     </div>
 </div>
@@ -103,15 +103,16 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $sql = "INSERT INTO hotel_registration (ID,hotel_name, owner_name, email, phone_number, gst_number, address, pincode, city, state, location) VALUES (1,'$hotelName', '$ownerName', '$email', '$phoneNumber', '$gstNumber', '$address', '$pincode', '$city', '$state', '$location')";
     
 
+
     if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!" ;
+        echo "Registration successful!";
         header("Location: Hotel Dashboard.html");
-        exit();
+    exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     // Close the database connection
-    
+   
 }
 ?>

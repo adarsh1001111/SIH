@@ -66,7 +66,7 @@ form .input-box span.details{
 .user-details .input-box input:valid{
   border-color: #9b59b6;
 }
- form .gender-details .gender-title{
+ form .gender-details .gender-title .tourist-title{
   font-size: 20px;
   font-weight: 500;
  }
@@ -96,8 +96,13 @@ form .input-box span.details{
    background: #9b59b6;
    border-color: #d9d9d9;
  }
+ #dot-4:checked ~ .category label .one,
+ #dot-5:checked ~ .category label .two{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
  form input[type="radio"]{
-   display: none;
+   display: inline;
  }
  form .button{
    height: 45px;

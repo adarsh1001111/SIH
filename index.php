@@ -28,13 +28,23 @@
                 Simplify the tourism across India with Our Website
               </p>
             </div>
-           
+           <br>
             <div class="home-border">
               <div class="home-filter"></div>
                 <a href="Main registration.html" target="blank" class="home-border">
-                <input type="button" style="background:url('/10817176_19406483.jpg')" class="home-border" value="REGISTER"></a>
-                <a href="Main registration.html" target="blank" class="home-border">
-                <input type="button" style="background:url('/10817176_19406483.jpg')" class="home-border" value="login"></a>
+                <input type="button" style="font-size:20px;" class="home-border" value="REGISTER"></a>
+                
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <img src="10817176_19406483.jpg" display="inline" width="50px">
+              <div>
+              <a href="Main registration.html" target="blank" class="login-button">
+                <input type="button" style="font-size:20px;" class="login-button" value="Already Registered? Login"></a>
               </div>
             </div>
           </div>

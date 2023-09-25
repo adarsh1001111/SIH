@@ -10,7 +10,7 @@
   <div class="container">
     <div class="title">Tourist Registration</div>
     <div class="content">
-      <form action="#">
+      <form action="#"method="post">
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
@@ -37,41 +37,41 @@
           <input type="text" name="age" placeholder="Enter Age" required>
         </div>
         </div>
+
         <div class="gender-details">
-          <input type="radio" name="gender" id="dot-1">
-          <input type="radio" name="gender" id="dot-2">
-          <input type="radio" name="gender" id="dot-3">
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Male</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Female</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">Prefer not to say</span>
-            </label>
-          </div>
-        </div>
-	<div class="tourist-details">
-          <input type="radio" name="tourist" id="dot-1">
-          <input type="radio" name="tourist" id="dot-2">
-          <span class="gender-title">Tourist</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Indian</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot two"></span>
-            <span class="gender">Foreigner</span>
-          </label>
-          </div>
-        </div>
+  <span class="gender-title">Gender</span><br><br>
+  <input type="radio" name="gender" id="dot-1" value="Male">
+   <label for="dot-1">
+      <span class="dot one"></span>
+      <span class="gender">Male</span>
+    </label>
+  <input type="radio" name="gender" id="dot-2" value="Female">
+   <label for="dot-2">
+      <span class="dot two"></span>
+      <span class="gender">Female</span>
+    </label>
+  <input type="radio" name="gender" id="dot-3" value="Prefer not to say">
+  <label for="dot-3">
+      <span class="dot three"></span>
+      <span class="gender">Prefer not to say</span>
+    </label>
+</div>
+<br>
+<div class="gender-details">
+  <span class="gender-title">Tourist</span><br><br>
+  <input type="radio" name="tourist" id="dot-1" value="Male">
+   <label for="dot-1">
+      <span class="dot one"></span>
+      <span class="gender">Indian</span>
+    </label>
+  <input type="radio" name="tourist" id="dot-2" value="Female">
+   <label for="dot-2">
+      <span class="dot two"></span>
+      <span class="gender">Foreigner</span>
+    </label>
+</div>
+<br>
+
         <div class="button">
           <input type="submit" name="Register" value="Register">
         </div>
@@ -110,8 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     if (mysqli_query($conn, $sql)) {
         echo "Registration successful!";
-        // Redirect to a thank you page or another appropriate destination
-        // Example: header("Location: thank_you.php");
+        header("Location: Tourist Dashboard.html");
+    exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

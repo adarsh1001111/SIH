@@ -115,13 +115,14 @@
     line-height: 27px;
   }
   .home-border {
+    display:inline;
     height: 70px;
     max-height: 100px;
     width: 100%;
     display: flex;
     max-width: 500px;
     align-items: center;
-    background-color: rgb(237, 63, 63);
+    background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     border-width: 4px;
     border-radius: 50px;
@@ -150,4 +151,8 @@
     .home-navbar {
       padding: var(--dl-space-space-unit);
     }
+  }
+  .login-button{
+    background-color: rgb(149, 237, 255);
+    border-radius: 50px;
   }

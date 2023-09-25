@@ -22,7 +22,7 @@ require 'functions.php';
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="email" name="email" placeholder="Enter support email" required>
+            <input type="text" name="email" placeholder="Enter support email" required>
           </div>
           <div class="input-box">
             <span class="details">Customer Support Number</span>
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     if (mysqli_query($conn, $sql)) {
         echo "Registration successful!";
         header("Location: Cruise Operator Dashboard.html");
-        exit();
+    exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
